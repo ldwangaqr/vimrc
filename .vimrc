@@ -127,4 +127,5 @@ set background=dark
 set cursorline
 set nocompatible
 set backspace=indent,eol,start
-set guifont=JetBrainsMono-ExtraBold\ 20
+# set guifont=JetBrainsMono-ExtraBold\ 20
+set shortmess=atI
