@@ -1,19 +1,14 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
- 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
- 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'fatih/vim-go'
-Plugin 'Raimondi/delimitMate'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'scrooloose/nerdtree'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'mhartington/oceanic-next'
+ 	
+call plug#begin()
+Plug 'fatih/vim-go'
+Plug 'Raimondi/delimitMate'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/nerdtree'
+Plug 'dyng/ctrlsf.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tomasiser/vim-code-dark'
 " Ack插件
   Plugin 'mileszs/ack.vim'
 " Ack配置
@@ -28,7 +23,7 @@ map <F6> :TagbarToggle<CR>
   let NERDTreeWinSize = 20
   let NERDTreeShowBookmarks = 1
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call Plug#end()            " required
 filetype plugin indent on    " required
 
 " coc.nvim settings
