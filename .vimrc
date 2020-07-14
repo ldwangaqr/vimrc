@@ -10,9 +10,9 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tomasiser/vim-code-dark'
 " Ack插件
-  Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 " Ack配置
-  let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ag --nogroup --nocolor --column'
 map <F4> :Ack<CR>
 map <F6> :TagbarToggle<CR>
 " NerdTree 配置
