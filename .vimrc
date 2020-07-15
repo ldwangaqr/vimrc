@@ -9,11 +9,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'dyng/ctrlsf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tomasiser/vim-code-dark'
-" Ack插件
-Plug 'mileszs/ack.vim'
-" Ack配置
-let g:ackprg = 'ag --nogroup --nocolor --column'
-map <F4> :Ack<CR>
+map <F4> :CocSearch<CR>
 map <F6> :TagbarToggle<CR>
 " NerdTree 配置
   map <F8> :NERDTreeToggle<CR>
@@ -122,5 +118,5 @@ set background=dark
 set cursorline
 set nocompatible
 set backspace=indent,eol,start
-# set guifont=JetBrainsMono-ExtraBold\ 20
+set guifont=JetBrainsMono-ExtraBold\ 20
 set shortmess=atI
