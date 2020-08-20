@@ -6,20 +6,24 @@ Plug 'fatih/vim-go'
 Plug 'Raimondi/delimitMate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
-Plug 'dyng/ctrlsf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tomasiser/vim-code-dark'
-map <F4> :CocSearch<CR>
+plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+map <F4> :Leaderf rg<CR>
 map <F6> :TagbarToggle<CR>
 " NerdTree 配置
-  map <F8> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>
 
-  let NERDTreeIgnore=['\.o$','\.a$', '\.pyc$', '\.taghl$','\~$', 'cscope\.', 'tags$', '\.bak$', '\.php\~$']
-  let NERDTreeChDirMode = 2
-  let NERDTreeWinSize = 20
-  let NERDTreeShowBookmarks = 1
+let NERDTreeIgnore=['\.o$','\.a$', '\.pyc$', '\.taghl$','\~$', 'cscope\.', 'tags$', '\.bak$', '\.php\~$']
+
+let NERDTreeChDirMode = 2
+
+let NERDTreeWinSize = 20
+
+let NERDTreeShowBookmarks = 1
+
 " All of your Plugins must be added before the following line
-call Plug#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 
 " coc.nvim settings
@@ -113,10 +117,15 @@ syntax enable
 set hlsearch
 
 set t_Co=256
-colorscheme OceanicNext
+
+colorscheme codedark
+
 set background=dark
+
 set cursorline
+
 set nocompatible
+
 set backspace=indent,eol,start
-set guifont=JetBrainsMono-ExtraBold\ 20
+
 set shortmess=atI
