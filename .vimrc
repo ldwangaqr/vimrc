@@ -1,18 +1,19 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
  	
-call plug#begin()
+call plug#begin('~/.vim/pluged')
 Plug 'fatih/vim-go'
 Plug 'Raimondi/delimitMate'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
-Plug 'tomasiser/vim-code-dark'
-plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'jaredgorski/fogbell.vim'
+Plug 'airblade/vim-gitgutter'
 map <F4> :Leaderf rg<CR>
 map <F6> :TagbarToggle<CR>
 " NerdTree 配置
-map <F3> :NERDTreeToggle<CR>
+map <Space> :NERDTreeToggle<CR>
 
 let NERDTreeIgnore=['\.o$','\.a$', '\.pyc$', '\.taghl$','\~$', 'cscope\.', 'tags$', '\.bak$', '\.php\~$']
 
@@ -103,6 +104,8 @@ set incsearch
 
 setlocal noswapfile
 
+colorscheme fogbell
+
 set bufhidden=hide
 
 set fenc=utf-8
@@ -117,8 +120,6 @@ syntax enable
 set hlsearch
 
 set t_Co=256
-
-colorscheme codedark
 
 set background=dark
 
