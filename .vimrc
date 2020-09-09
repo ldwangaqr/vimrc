@@ -9,8 +9,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'jaredgorski/fogbell.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-map <F4> :Leaderf rg<CR>
+map <C-f> :Leaderf rg<CR>
 map <F6> :TagbarToggle<CR>
 " NerdTree 配置
 map <Space> :NERDTreeToggle<CR>
@@ -106,8 +107,6 @@ setlocal noswapfile
 
 colorscheme fogbell
 
-set bufhidden=hide
-
 set fenc=utf-8
 
 set shortmess=atI
@@ -117,6 +116,7 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 syntax enable
+
 set hlsearch
 
 set t_Co=256
